@@ -1,0 +1,732 @@
+{
+	"MySQL": {
+		"HostAdress": "localhost",
+		"Username": "",
+		"Password": "",
+		"DataBaseName": "ark_shop",
+		"Port": 3306
+	},
+	"Timed_Points": {
+		"Enable_Timed_Points": true,
+		"Interval_Minutes": 15,
+		"Groups_Stack": false,
+		"Groups": {
+			"Default": 120,
+			"Discord": 200,
+			"Vip": 300,
+			"Premium": 400,
+			"Elite": 500
+		}
+	},
+	"Points_Stealing_On_Player_Kills": {
+		"Enable": false,
+		"Points_Stolen_On_Kill": 0.03,
+		"Final_Reward_Multiplier": 1.0
+	},
+	"Lottery": {
+		"Enable_Lottery": true,
+		"Buy_Ticket_Command": "/lottery",
+		"Announce_Interval_Seconds": 20,
+		"Timespan_In_Minutes": 3,
+		"Minimum_Participants": 2,
+		"Win_Percentage": 1.0,
+		"Entry_Price": 2500,
+		"Interval_Minimum_Minutes": 15,
+		"Interval_Maximum_Minutes": 60,
+		"Lottery_Ingame_Name": "Lottery",
+		"Messages": {
+			"Lottery_Started": {
+				"Text": "The Lottery just opened up! Ticket price: {0}x points. Use {1} to buy.",
+				"Color": {
+					"Red": 28,
+					"Green": 224,
+					"Blue": 193
+				}
+			},
+			"Lottery_is_Running_Minutes": {
+				"Text": "The Lottery is open for another {0} minutes {1} seconds. Buy a ticket with {2}",
+				"Color": {
+					"Red": 89,
+					"Green": 216,
+					"Blue": 117
+				}
+			},
+			"Lottery_is_Running_Seconds": {
+				"Text": "The Lottery is only open for another {0} seconds. Buy a ticket with {1}",
+				"Color": {
+					"Red": 39,
+					"Green": 255,
+					"Blue": 148
+				}
+			},
+			"Lottery_Finished": {
+				"Text": "The Lottery is over, and the winner of {0} points is: {1}!",
+				"Color": {
+					"Red": 255,
+					"Green": 179,
+					"Blue": 33
+				}
+			},
+			"Lottery_Failed_Not_Enough_Participants": {
+				"Text": "The Lottery failed to meet the required number of participants. The entry fees have been refunded.",
+				"Color": {
+					"Red": 200,
+					"Green": 72,
+					"Blue": 21
+				}
+			},
+			"Ticket_Bought": {
+				"Text": "Congratulations with your ticket, you got: {}",
+				"Color": {
+					"Red": 255,
+					"Green": 179,
+					"Blue": 33
+				}
+			},
+			"Ticket_Already_Bought": {
+				"Text": "You've already bought a ticket! You got: {}",
+				"Color": {
+					"Red": 255,
+					"Green": 72,
+					"Blue": 21
+				}
+			},
+			"Unable_To_Afford_Ticket": {
+				"Text": "You're unable to afford a ticket. The price is: {} points.",
+				"Color": {
+					"Red": 255,
+					"Green": 72,
+					"Blue": 21
+				}
+			},
+			"Currently_No_Lottery_Running": {
+				"Text": "There's currently no lottery running.",
+				"Color": {
+					"Red": 255,
+					"Green": 72,
+					"Blue": 21
+				}
+			}
+		}
+	},
+	"Logging_Options":{
+		"Enable_Log_File": true,
+		"Enable_Discord_Log": false,
+		"Discord_Log_Webhook": "",
+		"Log_Buy": true,
+		"Log_Buy_Kits": true,
+		"Log_Use_Kits": true,
+		"Log_Points_Trading": true,
+		"BuyLogFormat": "{0} bought {1} for {2} points",		
+		"BuyKitsFormat": "{0} bought kit {1} x{2} for {3} points",
+		"UseKitLogFormat": "{0} used kit {1} now {2} kits left",
+		"TradeLogFormat": "{0} traded {1}x points with {2}."
+	},
+	"Shop_UI": {
+		"Use_Custom_Categories": true,
+		"Custom_Buff_HUD_Icon": "",
+		"Custom_Top_Logo_Path": "",
+		"Custom_Bottom_Left_WaterMark": "",
+		"Custom_Bottom_Left_WaterMark_UseThisToSeeAvailableSpace..": "Texture2D'/Game/Mods/WShop/UI/Includes/img/AvailableSpaceWaterMark.AvailableSpaceWaterMark'",
+		"Custom_Bottom_Left_WaterMark_Alpha": 1.0,
+		"Categories": {
+				"Show All Items": 0,
+				"Weapons": 1,
+				"Dye": 2,
+				"Dinosaurs": 3,
+				"Armor": 4,
+				"Structures": 5,
+				"Consumables": 6,
+				"Chibis": 7,
+				"Maps": 8
+			}		
+	},
+	"ShopSettings": {
+		"Buy_Command": "/buy",
+		"Sell_Command": "/sell",
+		"Kit_Command": "/kit",
+		"Kit_Buy_Command": "/buykit",
+		"Shop_Command": "/shop",
+		"Points_Command": "/points",
+		"Points_Trading": {
+			"Enable_Points_Trading": false,
+			"Allow_Only_Same_Team": false,
+			"Trade_Command": "/trade"
+		},
+		"Shop_Command_Opens_UI": true,
+		"Use_Hexagons_As_Currency": false,
+		"Shop_Name": "WShop",
+		"Use_F2_To_Open_UI": false,
+		"Enable_Hud_Icon": false,
+		"Send_UI_Data_In_Multiple_Chunks": false,
+		"UI_Links": {
+			"Discord_Join_Link": "",
+			"Server_Rules_Link": "",
+			"Donation_Shop_Link": ""
+		},
+		"MAGA_Integration": {
+			"Use_Maga_Plugin": false,
+			"Block_Buy_On_Pvp_Cooldown": true,
+			"Block_Kits_On_Pvp_Cooldown": true
+		},
+		"Shop_Listing_Text": {
+			"Items_Per_Page": 20,
+			"Display_Time": 15,
+			"Text_Size": 1.3,
+			"Each_Shop_Line_Format": "{0}) {1} Id: {2} - Price: {3}\n",
+			"Usage_Explanation": "Usage: /buy <id> <amount>",
+			"Kits_Heading": "Available kits for you:",
+			"Each_Kit_Line_Format": "\"{0}\" - {1} {2} left. Price: {3}\n",
+			"Kits_Usage_Explanation": "Usage: /kit <kitname>"
+		}
+	},
+	"Group_Discounts": {
+		"Admins": 75,
+		"Vip": 20
+	},
+	"Kits": {
+		"starter": {
+			"Title": "Starter",
+			"Categories": [ "Armor"],
+			"Description": "Starter Kit",
+			"DefaultAmount": 20,
+			"OnlyFromSpawn": false,
+			"AutoGiveOnSpawn": false,
+			"Price": 200,
+			"Exclude_From_Discount": false,
+			"Allow_While_Riding_Dinosaur": true,
+			"Limits":{
+				"Max_Purchase_Same_Time_Amount":1,
+				"Max_Purchases/Uses":10,
+				"Prevent_Usage_After_Wipe_For_Minutes":10,
+				"Cooldown_Days":0,
+				"Cooldown_Hours":0,
+				"Cooldown_Minutes":30,
+				"Cooldown_Seconds":0
+			 },
+			"Items": [
+			{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalPants.PrimalItemArmor_MetalPants'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalShirt.PrimalItemArmor_MetalShirt'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalHelmet.PrimalItemArmor_MetalHelmet'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalBoots.PrimalItemArmor_MetalBoots'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalGloves.PrimalItemArmor_MetalGloves'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponMetalPick.PrimalItem_WeaponMetalPick'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponMetalHatchet.PrimalItem_WeaponMetalHatchet'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponSickle.PrimalItem_WeaponSickle'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_PteroSaddle.PrimalItemArmor_PteroSaddle'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Mods/ARKomatic/Items/ARKomaticSpyglass/PrimalItemWeapon_ARKomaticSpyglass.PrimalItemWeapon_ARKomaticSpyglass'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponPike.PrimalItem_WeaponPike'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Mods/AwesomeTeleporters/Blueprints/Remote/PrimalItem_AwesomeTeleporters_Remote.PrimalItem_AwesomeTeleporters_Remote'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponCrossbow.PrimalItem_WeaponCrossbow'"
+				},
+				{
+					"Amount": 100,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowStone.PrimalItemAmmo_ArrowStone'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Mods/BetterReusables/GrapplingHook/PrimalItemAmmo_ReusableGrapplingHook.PrimalItemAmmo_ReusableGrapplingHook'"
+				}
+			],
+			"Dinos": [
+				{
+					"Level": 50,
+					"Neutered":false,
+					"Blueprint": "Blueprint'/Game/Mods/SpeedyFlyers/Dinos_NoOverspawn/Ptero/Ptero_Character_BP_SF.Ptero_Character_BP_SF'"
+				}
+			],
+			"ConsoleCommands": [
+
+			],
+			"PermissionGroupRequired": [
+
+			]
+		},
+		"discord": {
+			"Categories": [ "4"],
+			"Title": "Discord Starter",
+			"Description": "Discord Starter Kit",
+			"DefaultAmount": 20,
+			"OnlyFromSpawn": false,
+			"AutoGiveOnSpawn": false,
+			"Price": 300,
+			"Exclude_From_Discount": false,
+			"Items": [{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalPants.PrimalItemArmor_MetalPants'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalShirt.PrimalItemArmor_MetalShirt'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalHelmet.PrimalItemArmor_MetalHelmet'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalBoots.PrimalItemArmor_MetalBoots'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalGloves.PrimalItemArmor_MetalGloves'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponMetalPick.PrimalItem_WeaponMetalPick'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponMetalHatchet.PrimalItem_WeaponMetalHatchet'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponSickle.PrimalItem_WeaponSickle'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_PteroSaddle.PrimalItemArmor_PteroSaddle'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Mods/ARKomatic/Items/ARKomaticSpyglass/PrimalItemWeapon_ARKomaticSpyglass.PrimalItemWeapon_ARKomaticSpyglass'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponPike.PrimalItem_WeaponPike'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Mods/AwesomeTeleporters/Blueprints/Remote/PrimalItem_AwesomeTeleporters_Remote.PrimalItem_AwesomeTeleporters_Remote'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponCrossbow.PrimalItem_WeaponCrossbow'"
+				},
+				{
+					"Amount": 100,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowStone.PrimalItemAmmo_ArrowStone'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Mods/BetterReusables/GrapplingHook/PrimalItemAmmo_ReusableGrapplingHook.PrimalItemAmmo_ReusableGrapplingHook'"
+				}
+			],
+			"Dinos": [{
+				"Level": 100,
+				"Neutered":false,
+				"Blueprint": "Blueprint'/Game/Mods/SpeedyFlyers/Dinos_NoOverspawn/Ptero/Ptero_Character_BP_SF.Ptero_Character_BP_SF'"
+			}],
+			"ConsoleCommands": [
+
+			],
+			"PermissionGroupRequired": [
+				"Discord"
+			]
+		},
+		"cryopod": {
+			"Title": "Cryopod",
+			"Description": "5x Cryopods and 1x Cryofridge",
+			"DefaultAmount": 3,
+			"OnlyFromSpawn": false,
+			"AutoGiveOnSpawn": false,
+			"Price": 500,
+			"Exclude_From_Discount": false,
+			"Items": [{
+					"Amount": 5,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Extinction/CoreBlueprints/Weapons/PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Extinction/CoreBlueprints/Items/PrimalItemStructure_CryoFridge.PrimalItemStructure_CryoFridge'"
+				}
+			],
+			"Dinos": [],
+			"ConsoleCommands": [
+
+			],
+			"PermissionGroupRequired": [
+
+			]
+		},
+		"taming": {
+			"Title": "Taming",
+			"Description": "Taming Kit: Longneck+darts",
+			"DefaultAmount": 3,
+			"OnlyFromSpawn": false,
+			"AutoGiveOnSpawn": false,
+			"Price": 500,
+			"Exclude_From_Discount": false,
+			"Items": [{
+					"Amount": 1,
+					"Quality": 1,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponOneShotRifle.PrimalItem_WeaponOneShotRifle'"
+				},
+				{
+					"Amount": 100,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_TranqDart.PrimalItemAmmo_TranqDart'"
+				}
+			],
+			"Dinos": [],
+			"ConsoleCommands": [
+
+			],
+			"PermissionGroupRequired": [
+
+			]
+		},
+		"dtaming": {
+			"Title": "Discord Taming",
+			"Description": "Discord Taming Kit: Longneck+darts",
+			"DefaultAmount": 3,
+			"OnlyFromSpawn": false,
+			"AutoGiveOnSpawn": false,
+			"Price": 500,
+			"Exclude_From_Discount": false,
+			"Items": [{
+					"Amount": 1,
+					"Quality": 2,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponOneShotRifle.PrimalItem_WeaponOneShotRifle'"
+				},
+				{
+					"Amount": 100,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_TranqDart.PrimalItemAmmo_TranqDart'"
+				}
+			],
+			"Dinos": [],
+			"ConsoleCommands": [
+
+			],
+			"PermissionGroupRequired": [
+				"Discord"
+			]
+		},
+		"base": {
+			"Title": "Starter Base",
+			"Description": "All you need to get a starter base.",
+			"DefaultAmount": 3,
+			"OnlyFromSpawn": false,
+			"AutoGiveOnSpawn": false,
+			"Price": 1200,
+			"Exclude_From_Discount": false,
+			"Items": [{
+					"Amount": 13,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Mods/StructuresPlusMod/Structures/Foundations/Square/Metal/PrimalItemStructure_Foundation_Metal.PrimalItemStructure_Foundation_Metal'"
+				},
+				{
+					"Amount": 32,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Mods/StructuresPlusMod/Structures/Walls/Glass/PrimalItemStructure_Wall_Glass.PrimalItemStructure_Wall_Glass'"
+				},
+				{
+					"Amount": 2,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Mods/StructuresPlusMod/Structures/Doorframes_Double/Metal/PrimalItemStructure_DoubleDoorframe_MetalSP.PrimalItemStructure_DoubleDoorframe_MetalSP'"
+				},
+				{
+					"Amount": 2,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Mods/StructuresPlusMod/Doors/Doors_Double/Glass/PrimalItemStructure_DoubleDoor_Glass.PrimalItemStructure_DoubleDoor_Glass'"
+				},
+				{
+					"Amount": 13,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Mods/StructuresPlusMod/Structures/Ceilings/Square/Glass/PrimalItemStructure_Ceiling_Glass.PrimalItemStructure_Ceiling_Glass'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Mods/StructuresPlusMod/Crafting/RefiningForge/PrimalItemStructure_ForgePlus.PrimalItemStructure_ForgePlus'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Mods/StructuresPlusMod/Crafting/Smithy/PrimalItemStructure_SmithyPlus.PrimalItemStructure_SmithyPlus'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Mods/ARKomatic/Structures/WirelessGenerator/PrimalItemStructure_WirelessGenerator.PrimalItemStructure_WirelessGenerator'"
+				},
+				{
+					"Amount": 500,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Gasoline.PrimalItemResource_Gasoline'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Mods/ARKomatic/Structures/ARKomaticVault/PrimalItemStructure_ARKomaticVault.PrimalItemStructure_ARKomaticVault'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Mods/StructuresPlusMod/Structures/Ramps/Metal/PrimalItemStructure_Ramp_MetalSP.PrimalItemStructure_Ramp_MetalSP'"
+				},
+				{
+					"Amount": 1,
+					"Quality": 0,
+					"ForceBlueprint": false,
+					"Blueprint": "Blueprint'/Game/Mods/AwesomeTeleporters/Blueprints/Teleporter/PrimalItem_AwesomeTeleporters_Teleporter.PrimalItem_AwesomeTeleporters_Teleporter'"
+				}
+			],
+			"Dinos": [],
+			"ConsoleCommands": [
+
+			],
+			"PermissionGroupRequired": [
+
+			]
+		}
+	},
+	"ShopItems": {
+		|DinoReplace|,
+		|ItemReplace|
+	},
+	"SellItems": {
+		"ingots": {
+			"Description": "Sell metal ingots for points.",
+			"Price": 5000,
+			"Amount": 500,
+			"BluePrint": "Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_MetalIngot.PrimalItemResource_MetalIngot'"
+		}
+	},
+	"Messages":{
+		"Received_Points": {
+			"Text": "You received {0} points",
+			"Color": {
+				"Red": 60,
+				"Green": 255,
+				"Blue": 60
+			}
+		},
+		"Trade_Not_Enough_Points": {
+			"Text": "You do not have enough points to initiate this trade.",
+			"Color": {
+				"Red": 255,
+				"Green": 60,
+				"Blue": 60
+			}
+		},
+		"Trade_Found_More_Than_One_Player": {
+			"Text": "Found more than one player matching: '{0}'",
+			"Color": {
+				"Red": 255,
+				"Green": 60,
+				"Blue": 60
+			}
+		},
+		"Trade_Found_No_Players_With_Name": {
+			"Text": "Found no player matching: '{0}'",
+			"Color": {
+				"Red": 255,
+				"Green": 60,
+				"Blue": 60
+			}
+		},
+		"Trade_Cannot_Give_Points_To_Yourself": {
+			"Text": "You cannot give points to yourself.",
+			"Color": {
+				"Red": 255,
+				"Green": 60,
+				"Blue": 60
+			}
+		},
+		"Trade_Sent_Points_To_Player": {
+			"Text": "Successfully sent {0} points to {1}",
+			"Color": {
+				"Red": 60,
+				"Green": 255,
+				"Blue": 60
+			}
+		},
+		"Trade_Received_Points_From_Player": {
+			"Text": "You received {0} points from {1}",
+			"Color": {
+				"Red": 60,
+				"Green": 255,
+				"Blue": 60
+			}
+		},
+		"Trade_Usage": {
+			"Text": "Trade usage: /trade <'player_name'> <amount>   ( ' ' - are necessary).",
+			"Color": {
+				"Red": 60,
+				"Green": 255,
+				"Blue": 60
+			}
+		},
+		"Trade_Only_Same_Team_Allowed": {
+			"Text": "You're not only allowed to trade with your own team.",
+			"Color": {
+				"Red": 60,
+				"Green": 255,
+				"Blue": 60
+			}
+		}
+	},
+	"Notifications":{
+		"Cannot_Buy_With_Pvp_CD": {
+			"Text": "\nYou cannot buy anything under pvp cooldown.",
+			"Size": 3.0,
+			"Display_Time": 6,
+			"Color": {
+				"Red": 255,
+				"Green": 60,
+				"Blue": 60
+			}
+		},
+		"Cannot_Use_Kits_With_Pvp_CD": {
+			"Text": "\nYou cannot use kits under pvp cooldown.",
+			"Size": 3.0,
+			"Display_Time": 6,
+			"Color": {
+				"Red": 255,
+				"Green": 60,
+				"Blue": 60
+			}
+		},
+		"Point_Steal_Victim": {
+			"Text": "\nYou lost {0} points for dying to {1}",
+			"Size": 3.0,
+			"Display_Time": 6,
+			"Send_As_Message": false,
+			"Color": {
+				"Red": 255,
+				"Green": 60,
+				"Blue": 60
+			}
+		},
+		"Point_Steal_Killer": {
+			"Text": "\nYou earned {0} points for that kill {1}",
+			"Size": 3.0,
+			"Display_Time": 6,
+			"Send_As_Message": false,
+			"Color": {
+				"Red": 60,
+				"Green": 255,
+				"Blue": 60
+			}
+		}
+	}
+}
